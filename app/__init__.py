@@ -1,13 +1,9 @@
-from flask import Flask, Blueprint
+from flask import Flask
 
+from . import views
 
-bp = Blueprint('views', __name__)
 
 def create_app():
-	app = Flask(__name__)
-	app.register_blueprint(bp)
-	return app
-
-@bp.get('/')
-def hello():
-	return 'olar serumaninho'
+    app = Flask(__name__)
+    app.register_blueprint(views.bp)
+    return app
