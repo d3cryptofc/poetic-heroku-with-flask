@@ -1,0 +1,17 @@
+{# Herdando blocos do template "base.html" #}
+{% extends "base.html" %}
+
+{# Escrevendo no bloco "head" #}
+{% block head %}
+    <!-- Título da página -->
+    <title>Poetic Heroku with Flask</title>
+    
+    <!-- Importando arquivo estático CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{# Escrevendo no bloco "body" #}
+{% block body %}
+    <h1>Olá, pessoa!</h1>
+    <p>Tudo bom?</p>
+{% endblock %}
